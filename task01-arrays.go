@@ -1,7 +1,11 @@
 package homework
 
 func average(input [15]float32) (result float32) {
-	//Place your code here
-	// bla bla blaaaaa
-	return
+	var summ float32 = 0
+	for i := 0; i < len(input); i++ {
+		summ += input[i]
+	}
+	result = summ / float32(len(input))
+
+	return (result)
 }
