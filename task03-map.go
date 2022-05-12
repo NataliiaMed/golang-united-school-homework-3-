@@ -8,11 +8,13 @@ func sortMapValues(input map[int]string) (result []string) {
 		keys = append(keys, k)
 	}
 	sort.Ints(keys)
+	value := make([]string, 0, len(input))
 
-	for _, k := range keys {
-		result := input[k]
+	for k := 0; k < len(keys); k++ {
+		num := keys[k]
+		value = append(value, input[num])
 	}
 
-	return (result)
+	return (value)
 
 }
